@@ -86,7 +86,7 @@ try:
 
 except (FileNotFoundError, json.decoder.JSONDecodeError):
     print("An error occured loading paths, reverting to default...")
-    pkgpath = f"{os.getcwd()}\\system\\packages"
+    pkgpath = f"{os.getcwd()}/system/packages"
     pkg_paths = [pkgpath]
 
     with open("system/path.lds", "w") as file:
@@ -119,7 +119,7 @@ print("Loading command interpreter...")
 with open("system/cmdint.py") as file:
     cmdint = file.read()
 
-sysdir = f"{os.getcwd()}\\system"
+sysdir = f"{os.getcwd()}/system"
 
 if registry["password"] != None:
     passwordIsCorrect = False
