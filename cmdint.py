@@ -45,29 +45,29 @@ def handle(command):
 
             for i in os.listdir(path):
                 if registry["useColor"]:
-                    if os.path.isdir(path + "\\" + i):
+                    if os.path.isdir(path + "/" + i):
                         print(f"{colorama.Fore.GREEN}[DIR] {i}{colorama.Style.RESET_ALL}")
 
-                    elif os.path.isfile(path + "\\" + i):
+                    elif os.path.isfile(path + "/" + i):
                         print(f"{colorama.Fore.BLUE}{i}{colorama.Style.RESET_ALL}")
 
-                    elif os.path.islink(path + "\\" + i):
+                    elif os.path.islink(path + "/" + i):
                         print(f"{colorama.Fore.RED}[SYM] {i}{colorama.Style.RESET_ALL}")
 
-                    elif os.path.ismount(path + "\\" + i):
+                    elif os.path.ismount(path + "/" + i):
                         print(f"{colorama.Fore.YELLOW}[MNT] {i}{colorama.Style.RESET_ALL}")
 
                 else:
-                    if os.path.isdir(path + "\\" + i):
+                    if os.path.isdir(path + "/" + i):
                         print(f"[DIR] {i}")
 
-                    elif os.path.isfile(path + "\\" + i):
+                    elif os.path.isfile(path + "/" + i):
                         print(f"{i}")
 
-                    elif os.path.islink(path + "\\" + i):
+                    elif os.path.islink(path + "/" + i):
                         print(f"[SYM] {i}")
 
-                    elif os.path.ismount(path + "\\" + i):
+                    elif os.path.ismount(path + "/" + i):
                         print(f"[MNT] {i}")
 
         case "cd":
@@ -167,11 +167,11 @@ Example: path add C:\\
                 else:
                     print("Removed!")
 
-                with open(f"{sysdir}\\path.lds", "w") as file:
+                with open(f"{sysdir}/path.lds", "w") as file:
                     json.dump(pkg_paths, file)
 
         case "help":
-            with open(f"{sysdir}\\helpfile.lds") as file:
+            with open(f"{sysdir}/helpfile.lds") as file:
                 helpfile = file.readlines()
 
             try:
