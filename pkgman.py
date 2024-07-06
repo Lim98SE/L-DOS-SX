@@ -1,3 +1,4 @@
+#!/bin/python3
 def main(args):
     url = "https://www.lim95.com/pkgman"
     try:
