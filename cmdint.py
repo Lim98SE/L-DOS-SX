@@ -1,3 +1,4 @@
+#!/bin/python3
 def call_error(error):
     if registry["useColor"]:
         print(f"{colorama.Fore.RED}{error}{colorama.Style.RESET_ALL}")
