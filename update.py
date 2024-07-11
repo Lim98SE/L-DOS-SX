@@ -1,3 +1,4 @@
+#!/bin/python3
 def main(args):
     def update_cmdint():
         import requests
